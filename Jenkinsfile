@@ -2,7 +2,7 @@ node {
    def mvnHome
    stage('code checkout from GIT') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/lakshmi94u/springboot'
+      git 'https://github.com/jyotheesh/springboot.git'
       //https://github.com/lakshmi94u/springboot.git
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
