@@ -15,7 +15,7 @@ node {
       // Run the maven build
       withEnv(["MVN_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package sonar:sonar'
+            shell '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package sonar:sonar'
          } else {
             bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
          }
@@ -26,7 +26,7 @@ node {
       // Run the maven build
       withEnv(["MVN_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
+            shell '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
          } else {
             bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
          }
@@ -36,7 +36,7 @@ node {
       // Run the maven build
       withEnv(["MVN_HOME=$mvnHome"]) {
          if (isUnix()) {
-            sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean deploy'
+            shell '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean deploy'
          } else {
             bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean deploy/)
          }
